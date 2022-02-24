@@ -1,19 +1,21 @@
 {
-  "private": true,
+  "name": "dzfolio",
+  "version": "0.0.1",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
-  },
-  "dependencies": {
-    "date-fns": "^2.28.0",
-    "next": "latest",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "dev": "svelte-kit dev",
+    "build": "svelte-kit build",
+    "package": "svelte-kit package",
+    "preview": "svelte-kit preview",
+    "test": "playwright test",
+    "lint": "eslint --ignore-path .gitignore ."
   },
   "devDependencies": {
-    "gray-matter": "^4.0.3",
-    "remark": "^14.0.2",
-    "remark-html": "^15.0.1"
-  }
+    "@playwright/test": "^1.19.1",
+    "@sveltejs/adapter-auto": "next",
+    "@sveltejs/kit": "next",
+    "eslint": "^7.32.0",
+    "eslint-plugin-svelte3": "^3.2.1",
+    "svelte": "^3.44.0"
+  },
+  "type": "module"
 }
