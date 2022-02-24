@@ -1,6 +1,6 @@
 <script>
     import Title from "$lib/title.svelte";
-    import "../styles/global.css";
+    import "../style/global.scss";
 </script>
 
 <header>
@@ -12,7 +12,7 @@
 </main>
 
 <footer>
-    <p>. . .</p>
+    <!-- <p>. . .</p> -->
 </footer>
 
 <style>

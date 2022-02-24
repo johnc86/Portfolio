@@ -1,0 +1,13 @@
+@import 'app';
+
+@import url('https://fonts.googleapis.com/css2?family=Galindo&family=Qwigley&family=Roboto+Mono:wght@100;600&family=Rubik&family=Slackey&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background: $col-bg;
+    color: white;
+}
