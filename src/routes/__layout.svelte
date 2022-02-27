@@ -4,7 +4,7 @@
 </script>
 
 <header>
-    <Title title="John Callaghan" />
+    <Title />
 </header>
 
 <main> 
@@ -15,5 +15,8 @@
     <!-- <p>. . .</p> -->
 </footer>
 
-<style>
+<style type="scss">
+    main {
+        @include container;
+    }
 </style>

@@ -1,49 +1,56 @@
 <script>
-    export let title = "Ninja Gaming";
+    import Nav from "$lib/nav.svelte";
 </script>
 
 <div class="title">
-    <div class="title__icon"></div>
-    <div class="title__text">{title}</div>
+    <div class="title__bg"></div>
+    <div class="title__text">John Callaghan</div>
 </div>
+<Nav />
+<div class="title__margin"></div>
+
 
 <style type='scss'>
     .title {
+        $growthrate: 15vw;
+
+        position: fixed;
         display: flex;
-        margin-bottom: 8em;
+        width: 100%;
         
-        &__icon {
-            $iconsize: 30rem;
-            $iconcolor: $tint-50;
-            width: 0px;
-            height: 0px;
-            border-right: $iconsize solid transparent;
-            border-top: $iconsize solid $iconcolor;
-            border-left: $iconsize solid $iconcolor;
-            border-bottom: $iconsize solid $iconcolor;
-            border-top-left-radius: $iconsize;
-            border-top-right-radius: $iconsize;
-            border-bottom-left-radius: $iconsize;
-            border-bottom-right-radius: $iconsize;
+        &__bg {
+            background: hsla(0, 0%, 0%, 0.8);
             position: absolute;
-            top: -26rem;
-            left: -32rem;
-            transform: rotate(55deg);
+            top:  -15em;
+            left: 0;
+            width: 110%;
+            height: 16em;
+            transform: rotate(8deg) translateY(clamp(4em,$growthrate,7.5em));
         }
 
         &__text {
+            @include container;
+            font-size: clamp(3.5rem,$growthrate,7rem);
+
             font-family: $font-script;
-            position: absolute;
-            top: 1rem;
-            left: 3rem;
+            position: relative;
+            text-align: right;
+            white-space: nowrap;
 
             background: rgb(255,186,8);
             background: linear-gradient(153deg, rgba(255,186,8,1) 0%, rgba(6,188,193,1) 100%); 
-            font-size: 6em;
+            color: $col-white;
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        
+
+        &__margin {
+            position: relative;
+            // margin-bottom: $growthrate;
+            height: clamp(4em,$growthrate,7.5em);
+            margin-bottom: 4em;
+            // background: yellow;
+        }
     }
 </style>

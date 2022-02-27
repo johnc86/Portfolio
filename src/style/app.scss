@@ -4,23 +4,29 @@
 // variables, mixins should be here
 // 
 
+$breakmob: 20rem;
+$breaktab: 40rem;
+
+@mixin container {
+    width: $breaktab;
+    max-width: 90%;
+    margin: auto;
+}
 
 // Colours
-$col-bg: hsl(233, 24%, 19%);
+$col-bg: hsl(232, 24%, 19%);
 $col-yellow: hsl(43, 100%, 52%);
 $col-red: hsl(0, 83%, 40%);
 $col-pink: hsl(302, 95%, 68%);
 $col-cyan: hsl(182, 94%, 39%);
 $col-black: hsl(0, 0%, 0%);
-
-// Tints
-$tint-50: hsl(0,0%, 0%, 0.5);
+$col-white: rgb(180, 207, 205);
 
 // Fonts
 $font-playful: 'Galindo', cursive;
 $font-script: 'Qwigley', cursive;
 $font-mono: 'Roboto Mono', monospace;
-$font-sans: 'Rubik', sans-serif;
+$font-sans: 'Quicksand', sans-serif;
 $font-goofy: 'Slackey', cursive;
 
 @mixin absCenter {

@@ -1,10 +1,13 @@
 @import 'app';
 
-@import url('https://fonts.googleapis.com/css2?family=Galindo&family=Qwigley&family=Roboto+Mono:wght@100;600&family=Rubik&family=Slackey&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Galindo&family=Quicksand:wght@300;400;500;600;700&family=Qwigley&family=Slackey&display=swap');
 
 html, body {
     margin: 0;
     padding: 0;
+    font-family: $font-sans;
+    color: $col-white;
+    font-weight: 100;
 }
 
 html {
