@@ -1,19 +1,22 @@
+<!-- NO LONGER USED -->
+
 <script>
-    import Nav from "$lib/nav.svelte";
+    let scrolly
+    let blue = 8;
 </script>
 
-<div class="title">
-    <div class="title__bg"></div>
-    <div class="title__text">John Callaghan</div>
-</div>
-<Nav />
-<div class="title__margin"></div>
+<svelte:window bind:scrollY={scrolly}/>
 
+<div class="title">
+    <div class="title__bg"></div> 
+    <div class="title__text">
+        John Callaghan
+    </div>
+</div>
 
 <style type='scss'>
-    .title {
-        $growthrate: 15vw;
 
+    .title {
         position: fixed;
         display: flex;
         width: 100%;
@@ -36,21 +39,12 @@
             position: relative;
             text-align: right;
             white-space: nowrap;
-
             background: rgb(255,186,8);
-            background: linear-gradient(153deg, rgba(255,186,8,1) 0%, rgba(6,188,193,1) 100%); 
+            background: linear-gradient(153deg, rgba(255,186,8,1) 0%, rgba(6,188,193,1) 100%);
             color: $col-white;
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-        }
-
-        &__margin {
-            position: relative;
-            // margin-bottom: $growthrate;
-            height: clamp(4em,$growthrate,7.5em);
-            margin-bottom: 4em;
-            // background: yellow;
         }
     }
 </style>

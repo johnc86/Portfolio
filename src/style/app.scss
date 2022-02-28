@@ -8,10 +8,15 @@ $breakmob: 20rem;
 $breaktab: 40rem;
 
 @mixin container {
-    width: $breaktab;
-    max-width: 90%;
-    margin: auto;
+    max-width: $breaktab;
+    margin: 1rem;
+    @media only screen and (min-width: $breaktab) {
+        margin: auto;
+    }
 }
+
+// This determines the reponsive size changes for some elements
+$growthrate: 15vw;
 
 // Colours
 $col-bg: hsl(232, 24%, 19%);

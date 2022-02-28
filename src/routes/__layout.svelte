@@ -1,11 +1,12 @@
 <script>
-    import Title from "$lib/title.svelte";
+    import Header from "$lib/header.svelte";
+    import Nav from "$lib/nav.svelte";
     import "../style/global.scss";
+    // import {setContext} from 'svelte';
 </script>
 
-<header>
-    <Title />
-</header>
+
+<Header />
 
 <main> 
     <slot />
