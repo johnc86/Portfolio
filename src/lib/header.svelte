@@ -47,7 +47,7 @@
     }
 
     .header__bg {
-        -webkit-clip-path: polygon(0 0,100% 0,100% 100%,0 40%);
+        clip-path: polygon(0 0,100% 0,100% 100%,0 40%);
 
         width: 100%;
         height: 100%;
