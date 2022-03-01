@@ -40,6 +40,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 2rem;
         @media only screen and (min-width: $breaktab) {
             flex-direction: row;
         }

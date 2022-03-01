@@ -23,10 +23,11 @@
 <nav>
     <div class="nav__content">
         <ul class="nav__links" class:showMobMenu >
-            <li>Blog</li>
-            <li>Work</li>
-            <li>History</li>
-            <li>Contact</li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/posts">Blog</a></li>
+            <li><a href="/work">Work</a></li>
+            <li><a href="/career">Career</a></li>
+            <li><a href="/contact">Contact</a></li>
         </ul>
     </div>
 </nav>
@@ -90,7 +91,7 @@
             text-align: right;
             white-space: nowrap;
             background: rgb(255,186,8);
-            background: linear-gradient(153deg, rgba(255,186,8,1) 0%, rgba(6,188,193,1) 100%);
+            background: linear-gradient(153deg, rgb(0, 255, 221) 0%, rgb(28, 106, 252) 100%);
             color: $col-white;
             background-clip: text;
             -webkit-background-clip: text;
@@ -100,13 +101,25 @@
 
     nav {
         margin: auto;
-        // transform: translateY(max(-7em,{- (scrolly / 20)}em));
     }
 
     .nav {
         &__content {
             @include container;
             margin: 0 auto;
+
+            @media only screen and (min-width: $breaktab) {
+                position: absolute;
+                // left: 50%;
+                // transform: translate(-50%);
+                top: 0;
+                // width: 100%;
+                max-width: unset;
+                background: $headerbg;
+                width: 100%;
+                clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+            }
         }
 
         &__icon {
@@ -116,15 +129,54 @@
         }
 
         &__links {
-            // background: $col-bg;
             display: none;
+            background: $headerbg;
+            padding: 40% 10%;
+            position: fixed;
+            top: -5%;
+            left: 0;
+            width: 80%;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
             @media only screen and (min-width: $breaktab) {
+                @include container;
                 display: flex;
+                clip-path: unset;
+                background: none;
+                flex-wrap: wrap;
+                top: 0;
+                margin: 0;
+                position: relative;
+                padding: 3rem;
+                padding-top: 8rem;
             }
+
+            li {
+                list-style-type: none;
+                list-style: none;
+                font-family: $font-sans;
+                font-weight: 800;
+                font-size: 2rem;
+                display: block;
+
+                @media only screen and (min-width: $breaktab) {
+                    margin: 0.5rem 1rem;
+                    // background: $headerbg;
+                    // padding: 1rem 2rem;
+                }
+
+                a {
+                    color: $col-white;
+                    text-decoration: none;
+                }
+
+                
+            }
+
+            
         }
     }
 
     .showMobMenu {
-        display: flex;
+        display: block;
     }
 </style>

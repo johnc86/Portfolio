@@ -35,7 +35,7 @@
 
 <style lang="scss">
     .hero {
-        height: 20rem;
+        height: 30rem;
         // width: calc(100% + 2rem);
         position: absolute;
         top: 0;
@@ -47,7 +47,7 @@
             clip-path: polygon(0 0, 100% 0, 100% 84%, 0 100%);
             background: linear-gradient(
                 -86deg,
-                rgba(255, 186, 8, 1) 0%,
+                rgb(0, 71, 129) 0%,
                 rgba(6, 188, 193, 1) 100%
             );
             width: 100%;
@@ -55,7 +55,7 @@
         }
 
         &__spacer {
-            padding-bottom: 13rem;
+            padding-bottom: 23rem;
         }
     }
 </style>
