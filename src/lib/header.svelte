@@ -1,9 +1,7 @@
 <script>
     let showMobMenu = false
-    let scrolly
 </script>
 
-<svelte:window bind:scrollY={scrolly}/>
 
 <header on:click={() => showMobMenu = !showMobMenu}>
     <div class="header__bg"></div>
@@ -44,6 +42,7 @@
         @media only screen and (min-width: $breaktab) {
             flex-direction: column;
         }
+        z-index: 2;
     }
 
     .header__bg {

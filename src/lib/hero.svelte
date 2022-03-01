@@ -1,6 +1,6 @@
 <!-- https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY`; -->
 <!-- https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2022-02-25&api_key=DEMO_KEY -->
-<script context="module">
+<!-- <script context="module">
     export async function load({ fetch }) {
         const response = await fetch(
             `https://jsonplaceholder.typicode.com/todos/1`
@@ -23,24 +23,20 @@
 <script>
     export let title;
     console.log(title);
-</script>
+</script> -->
 
 <div class="hero">
     <div class="hero__bg">
         <img src="" alt="" />
     </div>
-    <img
-        src="propic2_sq.jpg"
-        alt="A round self-portrait"
-        class="hero__profimg"
-    />
+    
 </div>
 <div class="hero__spacer" />
 
 <style lang="scss">
     .hero {
         height: 20rem;
-        width: calc(100% + 2rem);
+        // width: calc(100% + 2rem);
         position: absolute;
         top: 0;
         left: 0;
@@ -56,20 +52,6 @@
             );
             width: 100%;
             height: 100%;
-        }
-
-        &__profimg {
-            position: absolute;
-            bottom: -5%;
-            right: 15%;
-            display: flex;
-            width: 10rem;
-            object-fit: contain;
-            height: auto;
-
-            margin: auto;
-            border-radius: 50%;
-            border: solid 0.5rem $col-cyan;
         }
 
         &__spacer {
