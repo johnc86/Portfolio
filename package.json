@@ -7,14 +7,17 @@
     "package": "svelte-kit package",
     "preview": "svelte-kit preview",
     "test": "playwright test",
-    "lint": "eslint --ignore-path .gitignore ."
+    "lint": "eslint --ignore-path .gitignore .",
+    "deploy": "node ./gh-pages.js"
   },
   "devDependencies": {
     "@playwright/test": "^1.19.1",
     "@sveltejs/adapter-auto": "next",
+    "@sveltejs/adapter-static": "^1.0.0-next.28",
     "@sveltejs/kit": "next",
     "eslint": "^7.32.0",
     "eslint-plugin-svelte3": "^3.2.1",
+    "gh-pages": "^3.2.3",
     "sass": "^1.49.8",
     "svelte": "^3.44.0",
     "svelte-preprocess": "^4.10.4"
