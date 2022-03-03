@@ -1,0 +1,20 @@
+@use 'utils.module.scss' as u;
+
+@import url('https://fonts.googleapis.com/css2?family=Galindo&family=Quicksand:wght@300;400;500;600;700&family=Qwigley&family=Slackey&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: u.$font-sans;
+    color: u.$col-white;
+    font-weight: 100;
+}
+
+html {
+    background: u.$col-bg;
+    color: u.$col-white;
+}
+
+* {
+    box-sizing: border-box;
+}

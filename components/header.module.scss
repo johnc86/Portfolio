@@ -1,0 +1,127 @@
+@use '../styles/utils.module.scss' as u;
+
+$headerbg: hsla(0,0%,0%,60%);
+.header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    @media only screen and (min-width: u.$breaktab) {
+        flex-direction: column;
+    }
+    z-index: 2;
+}
+.header__bg {
+    clip-path: polygon(0 0,100% 0,100% 100%,0 40%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: $headerbg;
+    z-index: 1;
+}
+.nav__button {
+    position: absolute;
+    z-index: 2;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: $headerbg;
+    color: u.$col-white;
+    padding: 1rem;
+    
+    display: flex;
+    @media only screen and (min-width: u.$breaktab) {
+        display: none;
+    }
+}
+.title {
+    display: flex;
+    width: 100%;
+    z-index: 2;
+    &__text {
+        font-size: clamp(3.5rem,u.$growthrate,7rem);
+        font-family: u.$font-script;
+        
+        margin: auto 1rem auto auto;
+        width: 100%;
+        @include u.container;
+        // position: relative;
+        text-align: right;
+        white-space: nowrap;
+        background: rgb(255,186,8);
+        background: linear-gradient(153deg, rgb(0, 255, 221) 0%, rgb(28, 106, 252) 100%);
+        color: u.$col-white;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+.nav {
+    margin: auto;
+    &__content {
+        @include u.container;
+        margin: 0 auto;
+        @media only screen and (min-width: u.$breaktab) {
+            position: absolute;
+            // left: 50%;
+            // transform: translate(-50%);
+            top: 0;
+            // width: 100%;
+            max-width: unset;
+            background: $headerbg;
+            width: 100%;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+    }
+    &__icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        fill: u.$col-white;
+    }
+    &__links {
+        display: none;
+        background: $headerbg;
+        padding: 40% 10%;
+        position: fixed;
+        top: -5%;
+        left: 0;
+        width: 100%;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+        @media only screen and (min-width: u.$breaktab) {
+            @include u.container;
+            display: flex;
+            clip-path: unset;
+            background: none;
+            flex-wrap: wrap;
+            top: 0;
+            margin: 0;
+            position: relative;
+            padding: 3rem;
+            padding-top: 8rem;
+        }
+        li {
+            list-style-type: none;
+            list-style: none;
+            font-family: u.$font-sans;
+            font-weight: 800;
+            font-size: 2rem;
+            display: block;
+            @media only screen and (min-width: u.$breaktab) {
+                margin: 0.5rem 1rem;
+                // background: $headerbg;
+                // padding: 1rem 2rem;
+            }
+            a {
+                color: u.$col-white;
+                text-decoration: none;
+            }
+            
+        }
+        
+    }
+}
+.showMobMenu {
+    display: block;
+}

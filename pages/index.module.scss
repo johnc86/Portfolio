@@ -1,0 +1,78 @@
+@use '../styles/utils.module.scss' as u;
+
+.bio {
+    @include u.container;
+    margin-top: -10rem;
+    display: flex;
+    flex-direction: column;
+}
+.headline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    @media only screen and (min-width: u.$breaktab) {
+        flex-direction: row;
+    }
+    
+    &Text {
+        display:flex;
+        flex-direction: column;
+        margin-top: -2.5rem;
+        @media only screen and (min-width: u.$breaktab) {
+            margin: auto;
+            margin-left: -3rem;
+        }
+        
+        
+        h2  {
+            background: u.$col-bg;
+            padding: 1rem;
+            border: solid 0.5rem u.$col-a1;
+            margin-bottom: 0;
+            
+            @media only screen and (min-width: u.$breaktab) {
+                padding-left: 3rem;
+            }
+        }
+    }
+    &Tags {
+        list-style-type: none;
+        display: inline-flex;
+        padding: 0;
+        margin: 0;
+        flex-wrap: wrap;
+        background: u.$col-a1;
+        border: solid 0.5rem u.$col-a1;
+        border-top: none;
+        margin-left: auto;
+        li {
+            font-family: u.$font-mono;
+            font-size: 0.8rem;
+            color: u.$col-a1;
+            background: u.$col-bg;
+            // border: 1px solid $col-bg;
+            border-radius: 0.5rem;
+            padding: 0.25rem 0.5rem;
+            margin: 0.25rem;
+            opacity: 0.7;
+        }
+    }
+}
+
+.profimg {
+    position: relative;
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    margin: auto;
+    margin-right: 0;
+    // margin: auto 0 auto auto;
+    border-radius: 50%;
+    border: solid 0.5rem u.$col-a1;
+    z-index: 1;
+}
+
+.blog {
+    @include u.container;
+}
