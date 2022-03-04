@@ -1,7 +1,7 @@
 import styles from './nav.module.scss'
 
 export default function Nav(props) {
-    if (props.test) {
+    if (props.open) {
         return (
             <nav>
                 <div className={styles.nav__content}>

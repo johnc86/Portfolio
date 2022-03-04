@@ -4,8 +4,14 @@
 // variables, mixins should be here
 // 
 
-$breakmob: 20rem;
-$breaktab: 40rem;
+// @import "sass:math" as math;
+
+$breakpoint: 40;
+$font-size: 16px;
+
+// $breakmob: #{math.div($breakpoint, 2)}rem;
+$breakmob: #{$breakpoint / 2}rem;
+$breaktab: #{$breakpoint}rem;
 
 @mixin container {
     max-width: $breaktab;
@@ -47,4 +53,8 @@ $font-goofy: 'Slackey', cursive;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+}
+
+:export {
+    cssBreakpoint: $breakpoint;
 }

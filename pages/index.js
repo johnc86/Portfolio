@@ -25,7 +25,7 @@ export default function Home({ allPostsData }) {
                 <title>{siteTitle}</title>
             </Head>
             <div className={styles.index}>
-                <section className={styles.bio}>
+                {/* <section className={styles.bio}>
                     <div className={styles.headline}>
                         <div className={styles.profimg}>
                             <Image
@@ -54,7 +54,7 @@ export default function Home({ allPostsData }) {
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est eveniet quasi cupiditate. Quisquam, voluptates quos! Inventore, commodi repudiandae. Ab quae voluptate iste accusamus aliquid commodi molestiae totam sunt quidem enim modi fuga atque harum ea suscipit in, beatae quod veritatis illo praesentium numquam quo architecto eos iure. Alias quam eaque, quia nemo expedita deserunt minima accusamus officia corporis debitis itaque nulla suscipit asperiores qui error facere! Accusamus harum in debitis vero! Nostrum ab ut veritatis magni animi repellendus incidunt libero soluta labore ipsum numquam maxime cum, obcaecati placeat inventore dolorum veniam eos vel nesciunt. Possimus vero magni nemo corrupti vitae?</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est eveniet quasi cupiditate. Quisquam, voluptates quos! Inventore, commodi repudiandae. Ab quae voluptate iste accusamus aliquid commodi molestiae totam sunt quidem enim modi fuga atque harum ea suscipit in, beatae quod veritatis illo praesentium numquam quo architecto eos iure. Alias quam eaque, quia nemo expedita deserunt minima accusamus officia corporis debitis itaque nulla suscipit asperiores qui error facere! Accusamus harum in debitis vero! Nostrum ab ut veritatis magni animi repellendus incidunt libero soluta labore ipsum numquam maxime cum, obcaecati placeat inventore dolorum veniam eos vel nesciunt. Possimus vero magni nemo corrupti vitae?</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est eveniet quasi cupiditate. Quisquam, voluptates quos! Inventore, commodi repudiandae. Ab quae voluptate iste accusamus aliquid commodi molestiae totam sunt quidem enim modi fuga atque harum ea suscipit in, beatae quod veritatis illo praesentium numquam quo architecto eos iure. Alias quam eaque, quia nemo expedita deserunt minima accusamus officia corporis debitis itaque nulla suscipit asperiores qui error facere! Accusamus harum in debitis vero! Nostrum ab ut veritatis magni animi repellendus incidunt libero soluta labore ipsum numquam maxime cum, obcaecati placeat inventore dolorum veniam eos vel nesciunt. Possimus vero magni nemo corrupti vitae?</p>
-                </section>
+                </section> */}
                 <section className={styles.blog}>
                     <h2>Blog</h2>
                     <ul className={styles.blog__list}>
