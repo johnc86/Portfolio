@@ -21,23 +21,28 @@ $headerbg: hsla(0,0%,0%,60%);
     z-index: 1;
 }
 .nav__button {
-    position: absolute;
+    display: flex;
+    // position: relative;
     z-index: 2;
-    left: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
+    // left: 0;
+    // top: 0;
+    // transform: translateY(-50%);
     border: none;
     background: $headerbg;
     color: u.$col-white;
-    padding: 1rem;
-    
-    display: flex;
-    @media only screen and (min-width: u.$breaktab) {
-        // display: none;
-        @include u.container;
-    }
+    // padding: 1rem 1.25rem;
+    width: 3rem;
+    height: 3rem;
+    justify-content: center;
+    align-items:center;
+    align-self: center;
+        @media only screen and (min-width: u.$breaktab) {
+            display: none;
+        }
+
 }
 .title {
+    @include u.container;
     display: flex;
     width: 100%;
     z-index: 2;
@@ -45,9 +50,8 @@ $headerbg: hsla(0,0%,0%,60%);
         font-size: clamp(3.5rem,u.$growthrate,7rem);
         font-family: u.$font-script;
         
-        margin: auto 1rem auto auto;
+        margin: 1rem 0 auto auto;
         width: 100%;
-        @include u.container;
         // position: relative;
         text-align: right;
         white-space: nowrap;

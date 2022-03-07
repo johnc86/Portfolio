@@ -1,0 +1,29 @@
+@use '../../styles/utils.module.scss' as u;
+$headerbg: hsla(0,0%,0%,60%);
+
+
+.nav__desktop {
+    display: none;
+    
+    @media only screen and (min-width: u.$breaktab) {
+        display: flex;
+    }
+}
+
+.nav__desktop {
+    @include u.container;
+    margin: auto;
+    &__content {
+        @include u.container;
+        margin: 0 auto;
+        position: absolute;
+        // left: 50%;
+        // transform: translate(-50%);
+        top: 0;
+        // width: 100%;
+        max-width: unset;
+        background: $headerbg;
+        width: 100%;
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    }
+}

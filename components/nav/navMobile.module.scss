@@ -1,0 +1,33 @@
+@use '../../styles/utils.module.scss' as u;
+$headerbg: hsla(0,0%,0%,60%);
+
+
+.nav {
+    margin: auto;
+
+    &__desktop {
+        display: flex;
+    }
+
+
+    &__content {
+        @include u.container;
+        margin: 0 auto;
+        @media only screen and (min-width: u.$breaktab) {
+            position: absolute;
+            // left: 50%;
+            // transform: translate(-50%);
+            top: 0;
+            // width: 100%;
+            max-width: unset;
+            background: $headerbg;
+            width: 100%;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+    }
+    &__icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        fill: u.$col-white;
+    }
+}

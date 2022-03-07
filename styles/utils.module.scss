@@ -6,8 +6,8 @@
 
 // @import "sass:math" as math;
 
-$breakpoint: 40;
-$font-size: 16px;
+$breakpoint: 40; // breakpoint size in rem
+$font-size: 16; // font size in px
 
 // $breakmob: #{math.div($breakpoint, 2)}rem;
 $breakmob: #{$breakpoint / 2}rem;
@@ -15,7 +15,7 @@ $breaktab: #{$breakpoint}rem;
 
 @mixin container {
     max-width: $breaktab;
-    margin: 1rem;
+    margin: 0 1rem;
     @media only screen and (min-width: $breaktab) {
         margin: auto;
     }
@@ -57,4 +57,5 @@ $font-goofy: 'Slackey', cursive;
 
 :export {
     cssBreakpoint: $breakpoint;
+    cssFontSize: $font-size;
 }
