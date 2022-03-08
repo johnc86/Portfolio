@@ -1,40 +1,26 @@
 @use '../../styles/utils.module.scss' as u;
 $headerbg: hsla(0,0%,0%,60%);
 
+.container {
+    @include u.container;
+    margin-left: 0;
+    width: 50%;
+    z-index: 50;
+}
 
-.nav__links {
-    // display: none;
-    background: $headerbg;
-    padding: 30% 10%;
-    position: fixed;
-    top: -5%;
-    left: 0;
-    width: 100%;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
-    // @media only screen and (min-width: u.$breaktab) {
-    //     @include u.container;
-    //     display: flex;
-    //     clip-path: unset;
-    //     background: none;
-    //     flex-wrap: wrap;
-    //     top: 0;
-    //     margin: 0;
-    //     position: relative;
-    //     padding: 3rem;
-    //     padding-top: 8rem;
-    // }
+.links {
+    // display: flex;
+    // flex-wrap: wrap;
+    list-style-type: none;
+    list-style: none;
+    font-family: u.$font-sans;
+    font-weight: 800;
+    font-size: 2rem;
+    padding: 0;
+    margin: 0;
+    
     li {
-        list-style-type: none;
-        list-style: none;
-        font-family: u.$font-sans;
-        font-weight: 800;
-        font-size: 2rem;
-        display: block;
-        @media only screen and (min-width: u.$breaktab) {
-            margin: 0.5rem 1rem;
-            // background: $headerbg;
-            // padding: 1rem 2rem;
-        }
+        margin: 0 1rem;
         a {
             color: u.$col-white;
             text-decoration: none;

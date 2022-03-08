@@ -22,15 +22,10 @@ $headerbg: hsla(0,0%,0%,60%);
 }
 .nav__button {
     display: flex;
-    // position: relative;
     z-index: 2;
-    // left: 0;
-    // top: 0;
-    // transform: translateY(-50%);
     border: none;
-    background: $headerbg;
+    background: black;
     color: u.$col-white;
-    // padding: 1rem 1.25rem;
     width: 3rem;
     height: 3rem;
     justify-content: center;
@@ -43,9 +38,15 @@ $headerbg: hsla(0,0%,0%,60%);
 }
 .title {
     @include u.container;
+    margin: 0 1rem;
     display: flex;
     width: 100%;
     z-index: 2;
+
+    @media only screen and (min-width: u.$breaktab) {
+        margin: auto;
+    }
+
     &__text {
         font-size: clamp(3.5rem,u.$growthrate,7rem);
         font-family: u.$font-script;
@@ -61,5 +62,7 @@ $headerbg: hsla(0,0%,0%,60%);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+
+        user-select: none;
     }
 }

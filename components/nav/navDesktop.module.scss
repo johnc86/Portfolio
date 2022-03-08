@@ -3,27 +3,42 @@ $headerbg: hsla(0,0%,0%,60%);
 
 
 .nav__desktop {
-    display: none;
+    display: flex;
+    clip-path: polygon(0 0, 100% 0, 100% 30%, 0% 100%);
+    background: $headerbg;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    padding-top: 10%;
+    padding-bottom: 10%;
     
-    @media only screen and (min-width: u.$breaktab) {
-        display: flex;
+    @media only screen and (max-width: u.$breaktab) {
+        display: none;
     }
 }
 
-.nav__desktop {
+
+.nav__content {
     @include u.container;
+    display: flex;
+    width: 100%;
     margin: auto;
-    &__content {
-        @include u.container;
-        margin: 0 auto;
-        position: absolute;
-        // left: 50%;
-        // transform: translate(-50%);
-        top: 0;
-        // width: 100%;
-        max-width: unset;
-        background: $headerbg;
-        width: 100%;
-        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    }
 }
+
+// .nav__desktop {
+//     // @include u.container;
+//     margin: auto;
+//     &__content {
+//         @include u.container;
+//         margin: 0 auto;
+//         position: absolute;
+//         // left: 50%;
+//         // transform: translate(-50%);
+//         top: 0;
+//         // width: 100%;
+//         max-width: unset;
+//         background: $headerbg;
+//         width: 100%;
+//         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+//     }
+// }
